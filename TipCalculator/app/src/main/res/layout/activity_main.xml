@@ -31,7 +31,7 @@
         android:gravity="center"
         android:background="@android:color/transparent"/>
 
-    <View   
+    <View
         android:id="@+id/vRatingButtons"
         android:layout_width="match_parent"
         android:layout_height="1dp"
@@ -106,6 +106,7 @@
         android:showDividers="middle">
 
         <TextView
+            android:id="@+id/tvTipPercent"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/main.msg.tippercent"
@@ -116,6 +117,7 @@
             android:layout_marginTop="@dimen/activity_vertical_margin"/>
 
         <TextView
+            android:id="@+id/tvTipAmount"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/main.msg.tippercent"
