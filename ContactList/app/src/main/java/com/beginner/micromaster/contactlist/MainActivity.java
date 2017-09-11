@@ -30,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
         Button button = (Button) findViewById(R.id.button_create_contact);
         button.setOnClickListener(new View.OnClickListener() {
 
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 String name = nameEditText.getText().toString();
                 String lastName = lastNameEditText.getText().toString();
                 String email = emailEditText.getText().toString();
@@ -38,21 +39,28 @@ public class MainActivity extends AppCompatActivity {
 
                 //Get values from EditText and create a new Contact
                 Integer phoneNumberInt = parsePhoneNumber(phoneNumber);
-                if (phoneNumberInt != null) {
+                if (phoneNumberInt != null)
+                {
                     createNewContact(name, lastName, email, phoneNumberInt);
                 }
             }
         });
     }
 
-    private void createNewContact(String name, String lastName, String email, Integer phoneNumber) {
+    private void createNewContact(String name, String lastName, String email, Integer phoneNumber)
+    {
         Contact contact = new Contact(name, lastName, email, phoneNumber);
         Log.d(TAG, "New contact created: " + contact.toString());
         clearEditText();
 
         Intent intent = new Intent(this, DetailActivity.class);
+
         //TODO: send the rest of contact parameters
         intent.putExtra("name", name);
+        intent.putExtra("lastName", lastName);
+        intent.putExtra("email", email);
+        intent.putExtra("phoneNumber", phoneNumber.toString());
+
         startActivity(intent);
     }
 
@@ -63,10 +71,14 @@ public class MainActivity extends AppCompatActivity {
         phoneNumberEditText.setText("");
     }
 
-    public static Integer parsePhoneNumber(String phoneNumber) {
-        try {
-            return Integer.parseInt(phoneNumber);
-        } catch (NumberFormatException e) {
+    public static Integer parsePhoneNumber(String phoneNumber)
+    {
+        try
+        {
+            return  Integer.parseInt(phoneNumber.toString().trim());
+        }
+        catch (NumberFormatException e)
+        {
             return null;
         }
     }
