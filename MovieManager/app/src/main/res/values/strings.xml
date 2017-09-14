@@ -9,4 +9,8 @@
     <string name="nav_upcoming">Upcoming</string>
     <string name="nav_profile">Profile</string>
     <string name="nav_logout">Logout</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment_np">Hello Now Playing fragment</string>
+    <string name="hello_blank_fragment_uc">Hello Upcoming fragment</string>
 </resources>
