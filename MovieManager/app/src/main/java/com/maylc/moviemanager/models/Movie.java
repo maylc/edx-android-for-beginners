@@ -65,8 +65,9 @@ public class Movie
         this.voteCount = voteCount;
     }
 
-    public String getPosterPath() {
-        return posterPath;
+    public String getPosterPath()
+    {
+        return String.format("https://image.tmdb.org/t/p/w342%s", posterPath);
     }
 
     public void setPosterPath(String posterPath) {
