@@ -1,10 +1,12 @@
 package edx.moviemanager.models;
 
+import java.io.Serializable;
+
 /**
  * Created by mlcf on 2017-09-29.
  */
 
-public class Movie
+public class Movie implements Serializable
 {
     String id;
     String title;
@@ -14,7 +16,8 @@ public class Movie
     String posterPath;
     String backdropPath;
 
-    public Movie(String id, String title, String overview, float voteAverage, float voteCount, String posterPath, String backdropPath) {
+    public Movie(String id, String title, String overview, float voteAverage, float voteCount, String posterPath, String backdropPath)
+    {
         this.id = id;
         this.title = title;
         this.overview = overview;
@@ -65,7 +68,7 @@ public class Movie
     }
 
     public String getPosterPath() {
-        return posterPath;
+        return String.format("https://image.tmdb.org/t/p/w342%s", posterPath);
     }
 
     public void setPosterPath(String posterPath) {
@@ -73,7 +76,7 @@ public class Movie
     }
 
     public String getBackdropPath() {
-        return backdropPath;
+        return String.format("https://image.tmdb.org/t/p/w780%s", backdropPath);
     }
 
     public void setBackdropPath(String backdropPath) {

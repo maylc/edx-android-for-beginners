@@ -5,7 +5,7 @@
     android:id="@+id/cvMovie"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginBottom="@dimen/activity_vertical_margin"
     android:clickable="true"
     android:foreground="?android:selectableItemBackground">
@@ -21,7 +21,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
-            android:srcCompat="@mipmap/ic_launcher"/>
+            android:src="@mipmap/ic_launcher"/>
 
         <TextView
             android:id="@+id/tvTitle"
@@ -47,7 +47,7 @@
             android:layout_toEndOf="@+id/ivMovieImage"
             android:layout_toRightOf="@+id/ivMovieImage"
             android:maxLength="190"
-            tools:text="Captain AmericaOverview" />
+            tools:text="Captain AmericaOverview"/>
 
 
 
